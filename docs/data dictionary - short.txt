@@ -7,10 +7,11 @@ ANC: ancestry recode
 	2 .Multiple
 	3 .Unclassified
 	4 .Not reported
+	8 .Suppressed for data year 2018 for select PUMAs
 
 CIT: citizenship status
 	1 .Born in the United States
-	2 .Born in Puerto Rico, Guam, the U.S. Virgin Islands, or .Northern Marianas
+	2 .Born in Puerto Rico, Guam, the U.S. Virgin Islands, or Northern Marianas
 	3 .Born abroad of U.S. citizen parent or parents
 	4 .U.S. citizen by naturalization
 	5 .Not a U.S. citizen
@@ -32,16 +33,19 @@ DREM: cognitive difficulty
 	1 .Yes
 	2 .No
 
-ESP: employment status of parents
-	b .N/A (not own child of householder, and not child in subfamily)
-	1 .Living with two parents: Both parents in labor force
-	2 .Living with two parents: Father only in labor force
-	3 .Living with two parents: Mother only in labor force
-	4 .Living with two parents: Neither parent in labor force
-	5 .Living with father: In labor force
-	6 .Living with father: Not in labor force
-	7 .Living with mother: In labor force
-	8 .Living with mother: Not in labor force
+ESP: Employment status of parents
+	b .N/A (not own child of householder, and not child in subfamily) 
+		.Living with two parents:
+	1 .Both parents in labor force
+	2 .Father only in labor force
+	3 .Mother only in labor force
+	4 .Neither parent in labor force 
+		.Living with one parent: Living with father:
+	5 .Father in the labor force
+	6 .Father not in labor force 
+					 Living with mother:
+	7 .Mother in the labor force
+	8 .Mother not in labor force
 
 ESR: employment status recode
 	b .N/A (less than 16 years old)
@@ -76,7 +80,25 @@ NATIVITY: nativity
 	1 .Native
 	2 .Foreign born
 
-RELP: not present (the most similar is RELSHIPP, which encodes relationships, but its domain is 20-38, which doesn't include the values of RELP). May be a dummy variable created by the prof to simulate corrupted data.
+RELP: Relationship
+	00 .Reference person
+	01 .Husband/wife
+	02 .Biological son or daughter
+	03 .Adopted son or daughter
+	04 .Stepson or stepdaughter
+	05 .Brother or sister
+	06 .Father or mother
+	07 .Grandchild
+	08 .Parent-in-law
+	09 .Son-in-law or daughter-in-law	
+	10 .Other relative	
+	11 .Roomer or boarder
+	12 .Housemate or roommate
+	13 .Unmarried partner
+	14 .Foster child
+	15 .Other nonrelative
+	16 .Institutionalized group quarters population
+	17 .Noninstitutionalized group quarters population
 
 SCHL: educational attainment
 	bb .N/A (less than 3 years old)
